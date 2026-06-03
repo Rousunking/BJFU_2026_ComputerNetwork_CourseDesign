@@ -1,19 +1,0 @@
-iw tneilc ehT
-.tnemngissa gnimmargorp tekcos PCT eht rof elif tset a si sihT !dlroW olleHcae dnes dna
-sknuhc dezis-modnar otni elif siht tilps llr revres ehT
-
-.lasrever rof revres eht ot knuhc hemoceb "yeknom elttil a" ,elpmaxe roF
-.tluser eht kcab sdnes dna etyb yb etyb knuhc hcae sesrevetekcos PCT .1
-:setartsnomed tcejorp sihT
-
-."a e little monkey" sl-noitacilppa motsuC .2
-SO tseug dna tsoh neewteb noitacinummoc revres tnerrucnoc dedaerht-itluM .3
-ngised locotorp yranib reyaes modnar htiw gnittilps knuhc citsinimreteD .4
-gnildnah ahcxe atad elbane yehT
-.noitacinummoc latigid nredom fo enobkcab eht era skrowten retupmoC
-
-dePCT gnidnatsrednU
-.sdnocesillim ni ebolg eht ssorca egneht yojne dna ,gnidoc peek ,gninrael peeK
-
-.tneduts SC yreve rof laitnesse si slocotorp PI/
-!ecneics retupmoc fo yenruoj 
