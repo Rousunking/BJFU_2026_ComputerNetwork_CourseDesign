@@ -1,0 +1,73 @@
+UDP Reliable Transport Simulation - Test File
+==============================================
+
+This file is used to test the GBN (Go-Back-N) sliding window protocol
+implemented over UDP sockets. The client will split this file into
+80-byte chunks and send them using a window size of 5 packets.
+
+Computer networks form the foundation of the modern internet. They enable
+communication between devices across the globe, from simple text messages
+to high-definition video streaming. Understanding how data moves through
+the network stack is essential for any computer science student.
+
+The TCP/IP protocol suite is the most widely used networking model today.
+It consists of four layers: Application, Transport, Internet, and Network
+Access. Each layer has specific responsibilities and protocols.
+
+At the transport layer, TCP provides reliable, connection-oriented service
+with features like flow control, congestion control, and error recovery.
+UDP, on the other hand, offers a lightweight, connectionless service that
+prioritizes speed over reliability.
+
+In this assignment, we simulate TCP-like reliability over UDP by implementing
+a GBN sliding window protocol. The sender maintains a window of unacknowledged
+packets and retransmits them upon timeout. The receiver only accepts packets
+in order and sends cumulative acknowledgments.
+
+Key concepts demonstrated in this project include:
+- Socket programming with Python's socket module
+- Binary protocol message encoding using struct
+- Sliding window flow control mechanism
+- Timeout and retransmission logic
+- Round-trip time (RTT) measurement and statistics
+- Random packet loss simulation
+- Application-layer protocol design
+
+Packet Format Design:
+Each UDP datagram carries an application-layer header with:
+- StudentID (2 bytes): Computed as last 4 digits XOR 0x5A3C
+- Type (2 bytes): 1=ConnectionRequest, 2=ConnectionACK, 3=Data, 4=ACK
+- Sequence Number (4 bytes): For ordering and acknowledgment
+- Data Length (4 bytes): Size of payload in bytes
+- Payload: The actual data being transmitted
+
+This custom header design ensures low collision probability among
+different students' implementations, as the combination of field
+names, sizes, and ordering is highly unique to each designer.
+
+The GBN protocol works as follows:
+1. Sender sends up to N packets without waiting for acknowledgment
+2. Receiver accepts only in-order packets, discards out-of-order ones
+3. Sender sets a timer for the oldest unacknowledged packet
+4. On timeout, sender retransmits all unacknowledged packets in window
+5. Cumulative ACKs acknowledge all packets up to a sequence number
+
+For this simplified implementation, we use a fixed window size of 5
+packets and a timeout value of 300 milliseconds. The server randomly
+drops incoming packets at a configurable rate to simulate network
+unreliability.
+
+Statistics collected after transmission include:
+- Packet loss rate (percentage of retransmitted packets)
+- RTT statistics: minimum, maximum, average, and standard deviation
+- Total number of packets sent versus successfully acknowledged
+
+This hands-on exercise provides practical experience with transport
+layer protocols and helps students understand the trade-offs between
+reliability and performance in network communication.
+
+--- End of test file ---
+ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;':",./<>?
+The quick brown fox jumps over the lazy dog. 1234567890.
+Pack my box with five dozen liquor jugs. How vexingly quick daft zebras jump!
+Sphinx of black quartz, judge my vow. The five boxing wizards jump quickly.

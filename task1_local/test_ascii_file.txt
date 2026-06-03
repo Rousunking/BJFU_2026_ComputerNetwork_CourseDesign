@@ -1,0 +1,18 @@
+Hello World! This is a test file for the TCP socket programming assignment.
+The client will split this file into random-sized chunks
+and send each chunk to the server for reversal.
+
+The server reverses each chunk byte by byte and sends back the result.
+For example, "a little monkey" becomes "yeknom elttil e a".
+
+This project demonstrates:
+1. TCP socket communication between host and guest OS
+2. Custom application-layer binary protocol design
+3. Multi-threaded concurrent server handling
+4. Deterministic chunk splitting with random seed
+
+Computer networks are the backbone of modern digital communication.
+They enable data exchange across the globe in milliseconds.
+Understanding TCP/IP protocols is essential for every CS student.
+
+Keep learning, keep coding, and enjoy the journey of computer science!
